@@ -29,7 +29,7 @@ def get_numbers_ticket(min, max, quantity) -> list:
         min = int(min)
         max = int(max)
         quantity = int(quantity)
-        if min < 1 or max > 1000 or quantity < 1:
+        if min < 1 or max > 1000 or quantity < 1 or quantity > (max - min + 1):
             return []
 
         while len(random_numbers_set) < quantity:
